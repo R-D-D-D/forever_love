@@ -1,0 +1,24 @@
+<header class="navbar navbar-fixed-top navbar-inverse navbar-default">
+  <div class="container">
+    <%= link_to "爱你", root_path, id: "logo" %>
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to "Home", root_path, id: "navbar-button" %></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" id="navbar-button" data-toggle="dropdown">
+              Account <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "Profile", "#", id: "navbar-button" %></li>
+              <li><%= link_to "Settings", "#", id: "navbar-button" %></li>
+              <li class="divider">< /li>
+              <li>
+                <%= link_to "Log out", "#", id: "navbar-button" %>
+              </li>
+            </ul>
+          </li>
+          <li><%= link_to "Log in", "#", id: "navbar-button" %></li>
+      </ul>
+    </nav>
+  </div>
+</header>
