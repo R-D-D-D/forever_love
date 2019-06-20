@@ -13,10 +13,8 @@
 
 .brick-bg {
   background:linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)),
-  url("couple3.jpeg");
+  image-url("couple3.jpeg") center fixed;
   background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
 }
 
 #filler {
