@@ -11,11 +11,11 @@
 
 /* tutorial */
 
-.about-picture {
-  background-image: url("couple_background.jpeg");
+.brick-bg {
+  background:linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)),
+  url("couple3.jpeg");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
@@ -39,6 +39,15 @@ body {
 
 .height-80 {
   min-height: 80vh;
+}
+
+.height-10 {
+  min-height: 15vh;
+}
+
+#tag-line {
+  color: white;
+  text-align: center;
 }
 
 /* title */
@@ -67,35 +76,38 @@ input {
 }
 
 /* nav bar */
-.navbar-default {
-    background: #ee9ca7;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, #ffdde1, #ee9ca7);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, #ffdde1, #ee9ca7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    border-color: white;
+.my-nav {
+  background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)),
+  url('couple3.jpeg') center no-repeat;
+  height: 100vh;
+  background-size: cover;
 }
 
-#navbar-button {
+#my-navbar {
+  background: transparent !important;
+}
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  &:hover {
     color: #fff;
-&:hover {
-     text-decoration: none;
-     color: gray;
- }
+    text-decoration: none;
+  }
 }
 
-#account-button {
-    color: #fff;
-    background: #ee9ca7;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, #ffdde1, #ee9ca7);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, #ffdde1, #ee9ca7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-&:hover {
-     text-decoration: none;
-     color: gray;
- }
-}
-
-ul.dropdown-menu {
-    background: #ee9ca7;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, #ffdde1, #ee9ca7);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, #ffdde1, #ee9ca7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    border: white;
+.nav-link {
+  color: #fff;
+  font-size: 1.3em;
+  font-weight: bold;
+  &:hover {
+    color: lightgray;
+    text-decoration: none;
+  }
 }

@@ -1,27 +1,96 @@
-<div class="card-deck">
-  <div class="card">
-    <%= image_tag 'example.jpg' %>
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+<!-- album section -->
+<section id="team">
+  <div class="container-fluid px-5 brick-bg">
+    <!-- title -->
+    <div class="row py-3">
+      <div class="col text-center">
+        <h1 class="display-4 text-uppercase text-dark mb-0">
+          <strong>相册</strong>
+        </h1>
+        <div class="title-underline bg-danger"></div>
+      </div>
+    </div>
+    <!-- end of title -->
+    <div class="row">
+      <!-- team member -->
+      <div class="col-md-6 col-lg-4 my-3 p5">
+        <div class="card">
+          <%= image_tag 'ex2.jpg', class: 'card-img-top' %>
+          <div class="card-body">
+            <h5 class="card-title text-capitalize">team member</h5>
+            <p class="card-text">
+              loved tou for so long yet you ignore me every single day how dare you
+            </p>
+            <%= link_to "press here", root_url(:anchor => "team"), class: 'btn btn-outline-warning text-uppercase' %>
+          </div>
+          <div class="card-footer bg-light d-flex justify-content-start">
+            <p class="align-self-center">created at</p>
+          </div>
+        </div>
+      </div>
+      <!-- end of team member -->
+      <!-- team member -->
+      <div class="col-md-6 col-lg-4 my-3">
+        <div class="card">
+          <%= image_tag 'ex3.jpg', class: 'card-img-top' %>
+          <div class="card-body">
+            <h5 class="card-title text-capitalize">team member</h5>
+            <p class="card-text">
+              loved tou for so long yet you ignore me every single day how dare you
+            </p>
+            <%= link_to "press here", root_url(:anchor => "team"), class: 'btn btn-outline-warning text-uppercase' %>
+          </div>
+          <div class="card-footer bg-light d-flex justify-content-around">
+            <a href="#team"><i class="fab fa-facebook fa-2x text-dark"></i></a>
+            <a href="#team"><i class="fab fa-twitter fa-2x text-dark"></i></a>
+            <a href="#team"><i class="fab fa-youtube fa-2x text-dark"></i></a>
+            <a href="#team"><i class="fab fa-google fa-2x text-dark"></i></a>
+          </div>
+        </div>
+      </div>
+      <!-- end of team member -->
+      <!-- team member -->
+      <div class="col-md-6 col-lg-4 my-3">
+        <div class="card">
+          <%= image_tag 'ex.jpg', class: 'card-img-top' %>
+          <div class="card-body">
+            <h5 class="card-title text-capitalize">team member</h5>
+            <p class="card-text">
+              loved tou for so long yet you ignore me every single day how dare you
+            </p>
+            <%= link_to "press here", root_url(:anchor => "team"), class: 'btn btn-outline-warning text-uppercase' %>
+          </div>
+          <div class="card-footer bg-light d-flex justify-content-around">
+            <a href="#team"><i class="fab fa-facebook fa-2x text-dark"></i></a>
+            <a href="#team"><i class="fab fa-twitter fa-2x text-dark"></i></a>
+            <a href="#team"><i class="fab fa-youtube fa-2x text-dark"></i></a>
+            <a href="#team"><i class="fab fa-google fa-2x text-dark"></i></a>
+          </div>
+        </div>
+      </div>
+      <!-- end of team member -->
+      <!-- team member -->
+      <div class="col-md-6 col-lg-4 my-3">
+        <div class="card">
+          <%= image_tag 'ex3.jpg', class: 'card-img-top' %>
+          <div class="card-body">
+            <h5 class="card-title text-capitalize">team member</h5>
+            <p class="card-text">
+              loved tou for so long yet you ignore me every single day how dare you
+            </p>
+            <%= link_to "press here", root_url(:anchor => "team"),
+                        class: 'btn btn-outline-warning text-uppercase' %>
+          </div>
+          <div class="card-footer bg-light d-flex justify-content-around">
+            <a href="#team"><i class="fab fa-facebook fa-2x text-dark"></i></a>
+            <a href="#team"><i class="fab fa-twitter fa-2x text-dark"></i></a>
+            <a href="#team"><i class="fab fa-youtube fa-2x text-dark"></i></a>
+            <a href="#team"><i class="fab fa-google fa-2x text-dark"></i></a>
+          </div>
+        </div>
+      </div>
+      <!-- end of team member -->
     </div>
   </div>
-  <div class="card">
-    <%= image_tag 'example.jpg' %>
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-  <div class="card">
-    <%= image_tag 'example.jpg' %>
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-</div>
-
+</section>
+<!-- end of team section -->

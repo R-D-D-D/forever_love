@@ -1,28 +1,19 @@
-<header class="navbar navbar-fixed-top navbar-inverse navbar-default">
-  <div class="container">
-    <%= link_to "爱你", root_path, id: "logo" %>
-    <nav>
-      <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home", root_path, id: "navbar-button" %></li>
-        <% if logged_in? %>
-          <li><%= link_to "Album", events_index_path, id: "navbar-button" %></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" id="account-button" data-toggle="dropdown">
-              Account <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu">
-              <li><%= link_to "Profile", user_path(current_user), id: "navbar-button" %></li>
-              <li><%= link_to "Settings", "#", id: "navbar-button" %></li>
-              <li class="divider"><li>
-              <li>
-                <%= link_to "Log out", logout_path, method: :delete, id: "navbar-button" %>
-              </li>
-            </ul>
-          </li>
-          <% else %>
-          <li><%= link_to "Log in", login_path, id: "navbar-button" %></li>
-            <% end %>
-      </ul>
-    </nav>
+<nav class="navbar navbar-dark bg-dark">
+  <%= link_to "老婆生日快乐！", root_url, class: 'navbar-brand', id: 'logo' %>
+  <div>
+    <ul class="nav">
+      <% if logged_in? %>
+        <li class="nav-item">
+          <%= link_to "相册", events_path, class: 'nav-link' %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "计划", root_url, class: 'nav-link' %>
+        </li>
+      <% else %>
+        <li class="nav-item">
+          <%= link_to "登陆", login_path, class: 'nav-link' %>
+        </li>
+      <% end %>
+    </ul>
   </div>
-</header>
+</nav>

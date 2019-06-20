@@ -1,2 +1,10 @@
-<h1>Events#new</h1>
-<p>Find me in app/views/events/new.html.erb</p>
+<% provide(:title, "New event") %>
+<%= render 'layouts/header' %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <h1 class="center mt-5">创建相册</h1>
+      <%= render 'events/form' %>
+    </div>
+  </div>
+</div>
