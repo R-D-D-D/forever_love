@@ -1,96 +1,29 @@
-<!-- album section -->
-<section id="team">
-  <div class="container-fluid px-5 brick-bg">
-    <!-- title -->
-    <div class="row py-3">
-      <div class="col text-center">
-        <h1 class="display-4 text-uppercase text-dark mb-0">
-          <strong>相册</strong>
-        </h1>
-        <div class="title-underline bg-danger"></div>
-      </div>
-    </div>
-    <!-- end of title -->
-    <div class="row">
-      <!-- team member -->
-      <div class="col-md-6 col-lg-4 my-3 p5">
-        <div class="card">
-          <%= image_tag 'ex2.jpg', class: 'card-img-top' %>
-          <div class="card-body">
-            <h5 class="card-title text-capitalize">team member</h5>
-            <p class="card-text">
-              loved tou for so long yet you ignore me every single day how dare you
-            </p>
-            <%= link_to "press here", root_url(:anchor => "team"), class: 'btn btn-outline-warning text-uppercase' %>
-          </div>
-          <div class="card-footer bg-light d-flex justify-content-start">
-            <p class="align-self-center">created at</p>
-          </div>
-        </div>
-      </div>
-      <!-- end of team member -->
-      <!-- team member -->
-      <div class="col-md-6 col-lg-4 my-3">
-        <div class="card">
-          <%= image_tag 'ex3.jpg', class: 'card-img-top' %>
-          <div class="card-body">
-            <h5 class="card-title text-capitalize">team member</h5>
-            <p class="card-text">
-              loved tou for so long yet you ignore me every single day how dare you
-            </p>
-            <%= link_to "press here", root_url(:anchor => "team"), class: 'btn btn-outline-warning text-uppercase' %>
-          </div>
-          <div class="card-footer bg-light d-flex justify-content-around">
-            <a href="#team"><i class="fab fa-facebook fa-2x text-dark"></i></a>
-            <a href="#team"><i class="fab fa-twitter fa-2x text-dark"></i></a>
-            <a href="#team"><i class="fab fa-youtube fa-2x text-dark"></i></a>
-            <a href="#team"><i class="fab fa-google fa-2x text-dark"></i></a>
-          </div>
-        </div>
-      </div>
-      <!-- end of team member -->
-      <!-- team member -->
-      <div class="col-md-6 col-lg-4 my-3">
-        <div class="card">
-          <%= image_tag 'ex.jpg', class: 'card-img-top' %>
-          <div class="card-body">
-            <h5 class="card-title text-capitalize">team member</h5>
-            <p class="card-text">
-              loved tou for so long yet you ignore me every single day how dare you
-            </p>
-            <%= link_to "press here", root_url(:anchor => "team"), class: 'btn btn-outline-warning text-uppercase' %>
-          </div>
-          <div class="card-footer bg-light d-flex justify-content-around">
-            <a href="#team"><i class="fab fa-facebook fa-2x text-dark"></i></a>
-            <a href="#team"><i class="fab fa-twitter fa-2x text-dark"></i></a>
-            <a href="#team"><i class="fab fa-youtube fa-2x text-dark"></i></a>
-            <a href="#team"><i class="fab fa-google fa-2x text-dark"></i></a>
-          </div>
-        </div>
-      </div>
-      <!-- end of team member -->
-      <!-- team member -->
-      <div class="col-md-6 col-lg-4 my-3">
-        <div class="card">
-          <%= image_tag 'ex3.jpg', class: 'card-img-top' %>
-          <div class="card-body">
-            <h5 class="card-title text-capitalize">team member</h5>
-            <p class="card-text">
-              loved tou for so long yet you ignore me every single day how dare you
-            </p>
-            <%= link_to "press here", root_url(:anchor => "team"),
-                        class: 'btn btn-outline-warning text-uppercase' %>
-          </div>
-          <div class="card-footer bg-light d-flex justify-content-around">
-            <a href="#team"><i class="fab fa-facebook fa-2x text-dark"></i></a>
-            <a href="#team"><i class="fab fa-twitter fa-2x text-dark"></i></a>
-            <a href="#team"><i class="fab fa-youtube fa-2x text-dark"></i></a>
-            <a href="#team"><i class="fab fa-google fa-2x text-dark"></i></a>
-          </div>
-        </div>
-      </div>
-      <!-- end of team member -->
+<div class="container-fluid px-5 brick-bg">
+  <!-- title -->
+  <div class="row py-3">
+    <div class="col text-center">
+      <h1 class="display-4 text-uppercase text-light">
+        <strong>相册</strong>
+      </h1>
+      <div class="title-underline bg-danger"></div>
     </div>
   </div>
-</section>
-<!-- end of team section -->
+  <!-- end of title -->
+  <%= render 'events/carousel' %>
+  <!-- title -->
+  <div class="row pt-5 justify-content-start">
+    <div class="col d-flex justify-content-between align-items-center">
+      <h1 class="display-4 text-uppercase text-light ml-3">
+        全部
+      </h1>
+      <%= link_to "创建相册", new_event_path, class: 'nav-link' %>
+    </div>
+    <div class="title-underline bg-danger full"></div>
+  </div>
+  <!-- end of title -->
+  <div class="row">
+    <% if @events.any? %>
+        <%= render @events %>
+    <% end %>
+  </div>
+</div>

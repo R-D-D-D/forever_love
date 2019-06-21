@@ -13,6 +13,14 @@ Rails.application.routes.draw do
       get :videos
     end
   end
-  resources :videos
-  resources :photos
+  resources :videos do
+    member do
+      delete :delete_image
+    end
+  end
+  resources :photos do
+    member do
+      delete :delete_image
+    end
+  end
 end

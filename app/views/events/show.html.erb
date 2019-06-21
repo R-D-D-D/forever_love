@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <div class="col text-light text-center">
+      <h1><%= @event.name %></h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col text-light text-center">
+      <%= link_to "添加照片", new_photo_path(event_id: @event.id), class: 'nav-link' %>
+    </div>
+  </div>
+  <div class="row height-80">
+    <% if @landscape_photos %>
+      <% @landscape_photos.each do |photo| %>
+        <%= render 'events/photo', photo: photo %>
+      <% end %>
+    <% end %>
+    <% if @portrait_photos %>
+      <% @portrait_photos.each do |photo| %>
+        <%= render 'events/photo', photo: photo %>
+      <% end %>
+    <% end %>
+  </div>
+</div>

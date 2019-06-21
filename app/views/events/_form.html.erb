@@ -1,17 +1,17 @@
 <%= form_for(@event) do |f| %>
   <%= render 'shared/error_messages', object: @event %>
 
-  <%= f.label :名字 %>
-  <%= f.email_field :name, class: 'form-control' %>
+  <%= f.label :名字, class: 'text-light' %>
+  <%= f.text_field :name, class: 'form-control' %>
 
-  <%= f.label :描述 %>
+  <%= f.label :描述, class: 'text-light' %>
   <%= f.text_area :description, class: 'form-control' %>
 
-  <%= f.label :日期 %>
+  <%= f.label :日期, class: 'text-light' %>
   <%= f.date_field :date, class: 'form-control' %>
 
-  <%= f.label :封面 %>
+  <%= f.label :封面, class: 'text-light' %>
   <%= f.file_field :thumbnail, class: 'form-control' %>
 
-  <%= f.submit "Create", class: "btn btn-primary", style: 'margin-top: 10px;' %>
+  <%= f.submit "创建", class: "btn btn-primary", style: 'margin-top: 10px;' %>
 <% end %>

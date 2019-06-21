@@ -1,0 +1,22 @@
+<%= form_for(@photo) do |f| %>
+  <%= render 'shared/error_messages', object: @photo %>
+
+  <%= hidden_field_tag :id, @event.id %>
+  <%= f.label :说两句吧, class: 'text-light' %>
+  <%= f.text_area :description, class: 'form-control' %>
+
+  <% if yield(:title) == "修改" %>
+    <%= image_tag @photo.image, class: 'card-img-top' %>
+    <%= f.label :换照片, class: 'text-light' %>
+    <%= f.file_field :image, class: 'form-control' %>
+  <% else %>
+    <%= f.label :照片, class: 'text-light' %>
+    <%= f.file_field :image, class: 'form-control' %>
+  <% end %>
+
+  <div class="form-check">
+    <%= f.check_box :portrait, class: 'form-check-input' %>
+    <%= f.label :四比五, class: 'form-check-label text-light' %>
+  </div>
+  <%= f.submit "创建", class: "btn btn-primary", style: 'margin-top: 10px;' %>
+<% end %>

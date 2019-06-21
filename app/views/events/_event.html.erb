@@ -1,0 +1,19 @@
+<!-- team member -->
+<div class="col-md-6 col-lg-3 my-3 p5">
+  <div class="card height-10">
+    <%= image_tag event.thumbnail, class: 'card-img-top' %>
+    <div class="card-body p-3">
+      <h5 class="card-title text-capitalize mb-1">
+        <%= event.name %>
+      </h5>
+      <p class="card-text">
+       <%= event.description %>
+      </p>
+      <%= link_to "看相册", event_path(event), class: 'btn btn-secondary btn-sm' %>
+    </div>
+    <div class="card-footer bg-light d-flex justify-content-start">
+      <p class="text-center">日期： <%= event.date.strftime("%Y-%m-%d") %></p>
+    </div>
+  </div>
+</div>
+<!-- end of team member -->

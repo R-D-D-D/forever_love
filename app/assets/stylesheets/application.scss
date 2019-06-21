@@ -39,8 +39,16 @@ body {
   min-height: 80vh;
 }
 
-.height-10 {
-  min-height: 15vh;
+.height-30px {
+  min-height: 30px !important;
+}
+
+.height-30 {
+  min-height: 30vh;
+}
+
+.height-90 {
+  min-height: 90vh;
 }
 
 #tag-line {
@@ -76,7 +84,7 @@ input {
 /* nav bar */
 .my-nav {
   background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)),
-  url('couple3.jpeg') center no-repeat;
+  image-url('couple3.jpeg') center no-repeat;
   height: 100vh;
   background-size: cover;
 }
@@ -109,3 +117,22 @@ input {
     text-decoration: none;
   }
 }
+
+/* card */
+.card-footer {
+  height: 8vh;
+  line-height: 20px;
+  padding: 15px;
+  text-align: inherit;
+}
+
+.card-text {
+  height: 30px;
+  font-size: 0.8em;
+}
+
+/* carousel */
+.full {
+  width: 100%;
+}
+

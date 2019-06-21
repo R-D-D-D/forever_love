@@ -11,16 +11,26 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
+    @portrait_photos = @event.photos.where(portrait: true)
+    @landscape_photos = @event.photos.where(portrait: false)
   end
 
   def create
     @event = Event.new(event_params)
     if @event.save
-      flash[:success] = "成功创建新相册！"
+      flash[:success] = "成功建立新相册！"
       redirect_to events_path
     else
       render 'new'
     end
+  end
+
+  def photos
+
+  end
+
+  def videos
+
   end
 
   private

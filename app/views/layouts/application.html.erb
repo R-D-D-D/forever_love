@@ -10,8 +10,11 @@
     <link href="https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
   </head>
 
-    <% flash.each do |message_type, message| %>
-      <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
-    <% end %>
-    <%= yield %>
+    <div class="container-fluid brick-bg">
+      <%= render 'layouts/header' %>
+      <% flash.each do |message_type, message| %>
+        <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+      <% end %>
+      <%= yield %>
+    </div>
 </html>
