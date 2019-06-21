@@ -10,8 +10,14 @@
   <%= f.label :日期, class: 'text-light' %>
   <%= f.date_field :date, class: 'form-control' %>
 
-  <%= f.label :封面, class: 'text-light' %>
-  <%= f.file_field :thumbnail, class: 'form-control' %>
-
-  <%= f.submit "创建", class: "btn btn-primary", style: 'margin-top: 10px;' %>
+  <% if yield(:title) == "编辑" %>
+    <%= image_tag @event.thumbnail, class: 'card-img-top' %>
+    <%= f.label :换封面, class: 'text-light' %>
+    <%= f.file_field :thumbnail, class: 'form-control' %>
+    <%= f.submit "修改", class: "btn btn-primary", style: 'margin-top: 10px;' %>
+  <% else %>
+    <%= f.label :封面, class: 'text-light' %>
+    <%= f.file_field :thumbnail, class: 'form-control' %>
+    <%= f.submit "创建", class: "btn btn-primary", style: 'margin-top: 10px;' %>
+  <% end %>
 <% end %>

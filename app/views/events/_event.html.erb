@@ -10,6 +10,7 @@
        <%= event.description %>
       </p>
       <%= link_to "看相册", event_path(event), class: 'btn btn-secondary btn-sm' %>
+      <%= link_to "编辑", edit_event_path(event), class: 'btn btn-secondary btn-sm' %>
     </div>
     <div class="card-footer bg-light d-flex justify-content-start">
       <p class="text-center">日期： <%= event.date.strftime("%Y-%m-%d") %></p>
