@@ -72,3 +72,7 @@ gem 'bootstrap', '~> 4.3.1'
 gem 'font-awesome-sass', '~> 5.8.1'
 
 gem "aws-sdk-s3", require: false
+
+gem 'will_paginate', '3.1.7'
+
+gem 'bootstrap-will_paginate'

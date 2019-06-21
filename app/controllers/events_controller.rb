@@ -2,7 +2,7 @@ class EventsController < ApplicationController
   before_action :logged_in_user
 
   def index
-    @events = Event.all
+    @events = Event.paginate(page: params[:page])
   end
 
   def new
@@ -11,8 +11,8 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
-    @portrait_photos = @event.photos.where(portrait: true)
-    @landscape_photos = @event.photos.where(portrait: false)
+    @portrait_photos = @event.photos.where(portrait: true).paginate(page: params[:page])
+    @landscape_photos = @event.photos.where(portrait: false).paginate(page: params[:page])
   end
 
   def create

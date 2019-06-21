@@ -24,6 +24,8 @@
   <div class="row">
     <% if @events.any? %>
         <%= render @events %>
+      <%= will_paginate @events %>
     <% end %>
   </div>
 </div>
+<%= will_paginate @events %>

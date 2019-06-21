@@ -5,20 +5,57 @@
     </div>
   </div>
   <div class="row">
-    <div class="col text-light text-center">
-      <%= link_to "添加照片", new_photo_path(event_id: @event.id), class: 'nav-link' %>
+    <div class="col-md-6 mx-auto text-light text-center">
+      <%= link_to "添加照片", new_photo_path(event_id: @event.id), class: 'btn btn-secondary btn-lg p-0' %>
     </div>
   </div>
-  <div class="row height-80">
-    <% if @landscape_photos %>
-      <% @landscape_photos.each do |photo| %>
-        <%= render 'events/photo', photo: photo %>
-      <% end %>
-    <% end %>
-    <% if @portrait_photos %>
-      <% @portrait_photos.each do |photo| %>
-        <%= render 'events/photo', photo: photo %>
-      <% end %>
-    <% end %>
+  <div class="row">
+    <div class="col">
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Portrait</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Landscape</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+        <div class="row">
+          <% if @portrait_photos %>
+            <%= render @portrait_photos %>
+          <% end %>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-6 offset-md-3">
+            <nav aria-label="Page navigation example">
+              <%= will_paginate @portrait_photos %>
+              <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        <% if @landscape_photos %>
+          <div class="row">
+            <%= render @landscape_photos %>
+          </div>
+        <% end %>
+      </div>
+      <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+      </div>
+    </div>
   </div>
 </div>
