@@ -8,10 +8,12 @@
       </p>
     </div>
     <div class="card-footer bg-light d-flex justify-content-around p-2">
+      <% if photo.image.attached? %>
       <%= link_to "下载",
                   rails_blob_path(photo.image.attachment,
                                   disposition: :attachment),
                   class: 'btn btn-secondary btn-sm' %>
+      <% end %>
       <%= link_to "编辑",
                   edit_photo_path(photo),
                   class: 'btn btn-secondary btn-sm' %>
