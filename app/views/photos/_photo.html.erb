@@ -1,18 +1,20 @@
 <!-- team member -->
 <div class="col-md-6 col-lg-3 my-3 p5">
   <div class="card height-10">
-    <%= image_tag photo.image, class: 'card-img-top' if photo.image.attached? %>
+    <% if photo.image.attached? %>
+      <%= image_tag photo.image, class: 'card-img-top' if photo.image.attached? %>
+    <% end %>
     <div class="card-body p-3">
-      <p class="card-text height-30px" >
+      <p class="card-text height-30px">
         <%= photo.description %>
       </p>
     </div>
     <div class="card-footer bg-light d-flex justify-content-around p-2">
       <% if photo.image.attached? %>
-      <%= link_to "下载",
-                  rails_blob_path(photo.image.attachment,
-                                  disposition: :attachment),
-                  class: 'btn btn-secondary btn-sm' %>
+        <%= link_to "下载",
+                    rails_blob_path(photo.image.attachment,
+                                    disposition: :attachment),
+                    class: 'btn btn-secondary btn-sm' %>
       <% end %>
       <%= link_to "编辑",
                   edit_photo_path(photo),
